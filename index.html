@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" media=""screen">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Open in browser - bookmarklet</title>
+  </head>
+  <body>
+    <div class="centerDiv">
+      <h1>Bookmarklet: Open in browser</h1>
+      <p>
+        <strong>Drag</strong> the link below into your browser’s
+        <strong>bookmarks bar</strong>.
+      </p>
+      <a
+        href='javascript:(function () {   const services = {     "Afaan Oromoo": "afaanoromoo",     "Amharic": "amharic",     "Arabic": "arabic",     "Azeri": "azeri",     "Bengali": "bengali",     "News": "news",     "Mundo": "mundo",     "Persian": "persian",     "Afrique: ": "afrique",     "Gujarati": "gujarati",     "Hausa": "hausa",     "Hindi": "hindi",     "Indonesia": "indonesia",     "Japanese": "japanese",     "Korean": "korean",     "Kyrgyz": "kyrgyz",     "Marathi": "marathi",     "Burmese": "burmese",     "Nepali": "nepali",     "Punjabi": "punjabi",     "Pidgin": "pidgin",     "Pashto": "pashto",     "Brasil": "portuguese",     "Russian": "russian",     "Gahuza": "gahuza",     "Sinhala": "sinhala",     "Somali": "somali",     "Serbian": "serbian/lat",     "Swahili": "swahili",     "Tamil": "tamil",     "Telugu": "telugu",     "Thai": "thai",     "Tigrinya": "tigrinya",     "Turkce": "turkce",     "Ukrainian": "ukrainian",     "Urdu": "urdu",     "Uzbek": "uzbek",     "Vietnamese": "vietnamese",     "Yoruba": "yoruba",     "Zhongwen": "zhongwen/simp",   };   if (     services[       document.getElementById("details-dropdown__dropdown--home").firstChild.nodeValue     ]   ) {     const articleId = document.baseURI.slice(38).slice(0, -9);     window.open(       `https://www.bbc.com/${         services[           document.getElementById("details-dropdown__dropdown--home").firstChild.nodeValue         ]       }/articles/${articleId}`,       "_blank"     );   } else {     alert("This bookmarklet only works when accessed from the Settings tab of a published Optimo article.");   } })()'
+        >Open in browser</a
+      >
+      <p>
+        This bookmarklet can be used to open the <strong>live</strong> version
+        of an Optimo article in a new tab. The bookmarklet can be accessed only
+        from the <strong>Settings</strong> tab of a
+        <strong>published</strong> Optimo article.
+      </p>
+      <img src="screen.gif" />
+    </div>
+  </body>
+</html>
